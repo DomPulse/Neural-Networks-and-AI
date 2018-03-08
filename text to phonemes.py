@@ -1,16 +1,15 @@
 import nltk #nltk = natural language tool kit
 from nltk.tokenize import word_tokenize
 from nltk.corpus import cmudict
-pronunciations = cmudict.dict() #this makes the function easier to call
+pronunciations = cmudict.dict()
 
-def combine(words):  #This function recombines contractions and takes out commas
+def combine(words):
     x = []
     for w in words:
         if w != "," and "'" not in w:
             x.append(w)
         elif "'" in w:
             x[len(x)-1] += w
-    
     return(x)
 
 def process_content():
