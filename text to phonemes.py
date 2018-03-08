@@ -1,6 +1,6 @@
 import nltk #nltk = natural language tool kit
 from nltk.tokenize import word_tokenize
-from nltk.corpus import cmudict #this is how GLaDOS knows how to pronounce words
+from nltk.corpus import cmudict
 pronunciations = cmudict.dict() #this makes the function easier to call
 
 def combine(words):  #This function recombines contractions and takes out commas
@@ -15,7 +15,7 @@ def combine(words):  #This function recombines contractions and takes out commas
 
 def process_content():
     while True:
-        input_text = input("Type a sentance:") #This is the sentance GLaDOS will say
+        input_text = input("Type a sentance:")
         input_text = input_text.lower()
         input_text = input_text.replace(".", " ")
     
